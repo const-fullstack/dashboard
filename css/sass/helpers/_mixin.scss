@@ -1,0 +1,30 @@
+//media for mobile
+@mixin mobile {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+//media small
+@mixin small {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+//media medium
+@mixin medium {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+//media larg
+@mixin larg {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin trans {
+  transition: .5s;
+}

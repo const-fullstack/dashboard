@@ -1,0 +1,47 @@
+/* flex property */
+.d-flex {
+  display: flex;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bg-White {
+  background-color: #fff;
+}
+
+.p-relative {
+  position: relative;
+}
+
+.p10 {
+  padding: 10px;
+}
+.p15 {
+  padding: 15px;
+}
+.p20 {
+  padding: 20px;
+}
+
+.mt20 {
+  margin-top: 20px;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.rad-6 {
+  border-radius: 6px;
+}
+.rad-10 {
+  border-radius: 10px;
+}
+
+.txt-center {
+  text-align: center;
+}

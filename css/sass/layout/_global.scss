@@ -1,0 +1,33 @@
+//main font
+@font-face {   
+  font-family: "open sans";   
+  src: url("../google-font/open-sans/OpenSans-VariableFont_wdth,wght.ttf") 
+}
+
+//global rules
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "open sans";
+  background-color: #f1f5f9;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}

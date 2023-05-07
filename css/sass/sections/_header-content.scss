@@ -1,0 +1,57 @@
+@use "../helpers/vars" as *;
+
+header {
+  background-color: #fff;
+  .search {
+    &::before {
+      font-family: "Font Awesome 6 Free";
+      content: "\f002";
+      font-weight: 900;
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 14px;
+      z-index: 1;
+      color: $gray-color;
+    }
+    input {
+      caret-color: $blue-alt-color;
+      padding: {
+        top: 10px;
+        left: 30px;
+        right: 10px;
+        bottom: 10px;
+      }
+      border: 1px solid #ccc;
+      margin-left: 5px;
+      width: 160px;
+      transition: width 0.5s;
+      &:focus {
+        width: 180px;
+      }
+      &:focus::placeholder {
+        opacity: 0;
+      }
+    }
+  }
+  .icons {
+    .notification {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 9px;
+        background-color: $red-color;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+
+      }
+    }
+    img {
+      border-radius: 50%;
+      margin-left: 15px;
+    }
+  }
+}

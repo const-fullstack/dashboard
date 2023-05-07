@@ -1,4 +1,9 @@
-/* flex property */
+/**
+ * flex property
+ *
+ * @format
+ */
+
 .d-flex {
   display: flex;
 }
@@ -30,7 +35,9 @@
 .mt20 {
   margin-top: 20px;
 }
-
+.mb-10 {
+  margin-bottom: 10px;
+}
 .align-center {
   align-items: center;
 }
@@ -41,7 +48,27 @@
 .rad-10 {
   border-radius: 10px;
 }
-
+.rad-50 {
+  border-radius: 50%;
+}
 .txt-center {
   text-align: center;
+}
+.cover {
+  object-fit: cover;
+}
+
+.c-orange {
+  color: #f59e0b;
+}
+
+.c-blue {
+  color: #0075ff;
+}
+
+.c-green {
+  color: #22c55e;
+}
+.c-red {
+  color: #f44336;
 }

@@ -1,0 +1,372 @@
+/** @format */
+
+@use "../helpers/mixin" as *;
+@use "../helpers/vars" as *;
+
+.waper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 20px;
+  margin: 20px 20px;
+  text-transform: capitalize;
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin: 20px 10px;
+  }
+  > div {
+    background-color: #fff;
+    border-radius: 10px;
+  }
+
+  .welcome {
+    .welcome-head {
+      > div {
+        margin-bottom: 30px;
+      }
+      background-color: #eeeeee;
+      padding: 10px;
+      @include mobile {
+        flex-direction: column;
+      }
+    }
+    .welcome-body {
+      position: relative;
+      margin: {
+        top: 60px;
+        left: 0;
+        right: 0;
+        bottom: 0px;
+      }
+      padding: 50px 10px;
+      border-top: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      text-align: center;
+      @include mobile {
+        flex-direction: column;
+        padding: 20px 10px;
+      }
+      h3 {
+        font-weight: normal;
+        span {
+          padding-top: 10px;
+          padding-bottom: 20px;
+          display: block;
+          font-size: 14px;
+          color: $gray-color;
+        }
+      }
+
+      img {
+        position: absolute;
+        top: -90px;
+        left: 10px;
+      }
+    }
+    .welcome-footer {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+      a {
+        background-color: $blue-color;
+        color: #fff;
+        padding: 5px;
+        margin: 20px 10px;
+        &:hover {
+          @include trans;
+          background-color: $blue-alt-color;
+        }
+      }
+    }
+  }
+  .draft {
+    h2 {
+      margin-bottom: 10px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      input[type="text"] {
+        background-color: #eee;
+        outline: none;
+        border: none;
+        padding: 10px;
+        margin: 20px 0;
+      }
+      textarea {
+        height: 200px;
+        background-color: #eee;
+        border: none;
+        padding: 10px;
+        resize: none;
+        margin-bottom: 20px;
+      }
+      input[type="submit"] {
+        width: fit-content;
+        margin-left: auto;
+        padding: 5px;
+        color: #fff;
+        border: none;
+        background-color: $blue-color;
+        font-size: 1.1rem;
+        cursor: pointer;
+        &:hover {
+          @include trans;
+          background-color: $blue-alt-color;
+        }
+      }
+    }
+  }
+  .target {
+    padding: 20px;
+    h2 {
+      margin-bottom: 10px;
+    }
+    .target-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 20px 0;
+      .target-icon {
+        height: 80px;
+        width: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &.blue {
+          color: $blue-color;
+          background-color: rgba($color: $blue-color, $alpha: 20%);
+        }
+        &.green {
+          color: $green-color;
+          background-color: rgba($color: $green-color, $alpha: 20%);
+        }
+        &.yellow {
+          color: $orange-color;
+          background-color: rgba($color: $orange-color, $alpha: 20%);
+        }
+      }
+      .target-details {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+        span {
+          &:last-of-type {
+            margin: 10px 0;
+            font-weight: bold;
+          }
+        }
+
+        .progress {
+          height: 3px;
+          position: relative;
+          background-color: #eee;
+          span {
+            position: absolute;
+            bottom: -10px;
+            height: 100%;
+
+            &.span-blue {
+              background-color: $blue-color;
+              &::after {
+                border-top-color: $blue-color;
+              }
+            }
+
+            &.span-green {
+              background-color: $green-color;
+              &::after {
+                border-top-color: $green-color;
+              }
+            }
+
+            &.span-orange {
+              background-color: $orange-color;
+              &::after {
+                border-top-color: $orange-color;
+              }
+            }
+            &::before {
+              content: attr(progress);
+              position: absolute;
+              right: -10px;
+              bottom: 20px;
+              background-color: inherit;
+              padding: 5px;
+              color: #fff;
+              border-radius: 6px;
+            }
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: 3px;
+              right: 1px;
+              border-color: transparent;
+              border-width: 10px;
+              border-style: solid;
+              border-radius: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .tickets {
+    padding: 20px;
+    h2 {
+      margin: 10px 0;
+    }
+
+    .tickets-box {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 10px 0;
+      > div {
+        width: calc(50% - 20px);
+        @include mobile {
+          width: 100%;
+        }
+        margin: 10px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: center;
+      }
+    }
+  }
+  .last-news {
+    padding: 20px 10px;
+    .new-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      padding: 10px 10px 30px;
+      @include mobile {
+        flex-direction: column;
+        text-align: center;
+      }
+      &:not(:last-of-type) {
+        border-bottom: 1px solid #eee;
+      }
+      .new-content {
+        margin: 20px 0;
+      }
+      img {
+        width: 130px;
+        height: 100px;
+        border-radius: 6px;
+        object-position: top;
+      }
+      span {
+        background-color: #eee;
+        padding: 10px;
+        border-radius: 6px;
+      }
+    }
+  }
+  .task {
+    padding: 20px 10px;
+    .task-rwo:not(:last-child) {
+      border-bottom: 1px solid #ddd;
+    }
+    .task-rwo {
+      padding: 10px 20px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 30px 0;
+      .task-content {
+        h3 {
+          margin-bottom: 10px;
+        }
+      }
+      .delete {
+        cursor: pointer;
+        &:hover {
+          @include trans;
+          color: $red-color;
+        }
+      }
+
+      .done {
+        text-decoration: line-through;
+      }
+    }
+  }
+  .keywords {
+    padding: 20px;
+    .key-head,
+    .key-content {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      color: $gray-color;
+    }
+    .key-content {
+      color: black;
+      span:last-of-type {
+        background-color: #eee;
+        padding: 10px;
+        border-radius: 6px;
+      }
+    }
+  }
+  .last-project {
+    padding: 20px;
+
+    .process {
+      margin-top: 30px;
+      position: relative;
+      padding-left: 30px;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 95%;
+        width: 3px;
+        background-color: $blue-color;
+        margin-right: 10px;
+      }
+      li {
+        margin-bottom: 50px;
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -40px;
+          width: 20px;
+          height: 20px;
+          background-color: $blue-color;
+          border-radius: 50%;
+          z-index: 1;
+          border: 2px solid #fff;
+          outline: 2px solid $blue-color;
+        }
+        &.still::before {
+          @include trans;
+          animation: fade 2s infinite linear;
+        }
+        &.current::before {
+          background-color: #fff;
+        }
+      }
+      @keyframes fade {
+        from {
+          background-color: $blue-color;
+        }
+        to {
+          background-color: #fff;
+        }
+      }
+    }
+  }
+}

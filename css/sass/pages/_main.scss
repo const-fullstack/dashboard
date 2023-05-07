@@ -5,122 +5,33 @@
 
 main.main-page {
   height: 100vh;
-  aside.sidebar {
-    width: 250px;
-    box-shadow: 0px 0px 10px #ddd;
-    @include mobile {
-      width: 70px;
-    }
-    h3 {
-      margin-bottom: 50px;
-      text-transform: capitalize;
-      @include mobile {
-        font-size: 13px;
-        margin-bottom: 15px;
-      }
-      @include small {
-        &::before,
-        &::after {
-          content: "";
-          position: absolute;
-          left: 50%;
-          transform: translateX(-50%);
-          background-color: black;
-        }
-        &::before {
-          width: 40%;
-          height: 2px;
-          bottom: -20px;
-        }
-        &::after {
-          width: 12px;
-          height: 12px;
-          border: 4px solid #fff;
-          border-radius: 50%;
-          bottom: -29px;
-        }
-      }
-    }
-    ul {
-      li {
-        a {
-          padding: 10px 0;
-          font-size: 14px;
-          color: black;
-          @include trans;
-          margin-bottom: 5px;
-          &.active,
-          &:hover {
-            background-color: #f6f6f6;
-          }
-
-          span {
-            margin-left: 10px;
-            font-size: 14px;
-            @include mobile {
-              display: none;
-            }
-          }
-        }
-      }
-    }
-  }
+  @import "../sections/aside";
   .content {
     width: 100%;
-    
-    header {
-      .search {
-        &::before {
-          font-family: "Font Awesome 6 Free";
-          content: "\f002";
-          font-weight: 900;
-          position: absolute;
-          left: 15px;
-          top: 50%;
-          transform: translateY(-50%);
-          font-size: 14px;
-          z-index: 1;
-          color: $gray-color;
-        }
-        input {
-          caret-color: $blue-alt-color;
-          padding: {
-            top: 10px;
-            left: 30px;
-            right: 10px;
-            bottom: 10px;
-          }
-          border: 1px solid #ccc;
-          margin-left: 5px;
-          width: 160px;
-          transition: width 0.5s;
-          &:focus {
-            width: 180px;
-          }
-          &:focus::placeholder {
-            opacity: 0;
-          }
-        }
+    @import "../sections/header-content";
+    h1 {
+      font-size: 2rem;
+      color: black;
+      text-transform: capitalize;
+      position: relative;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        height: 3px;
       }
-      .icons {
-        .notification {
-          &::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 9px;
-            background-color: $red-color;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-
-          }
-        }
-        img {
-          border-radius: 50%;
-          margin-left: 15px;
-        }
+      &::before {
+        bottom: 0;
+        background-color: white;
+        width: 150px;
+      }
+      &::after {
+        bottom: 0;
+        background-color: black;
+        width: 100px;
+        left: 20px;
       }
     }
+    @import "../sections/waper";
   }
 }

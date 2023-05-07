@@ -1,0 +1,190 @@
+section.waper
+  //-first section------------------------------------------------------
+  div.welcome
+    .welcome-head.flex-between
+      .welcome-head-txt
+        h2 welcome
+        p to your profile
+      .welcome-head-img
+        img(src="img/welcome.png", alt="welcome photo", width="200px", height="100px")
+    .welcome-body
+      img(
+        class="rad-50 cover",
+        src="img/main-profile.jpg",
+        alt="elizabeth olsen",
+        width="64px",
+        height="64px"
+        )
+      h3 eizabeth olsen
+        span marvel star
+      h3 80
+        span number of film
+      h3 $8500
+        span earned
+    .welcome-footer
+      a(class="rad-6" ,href="page/profile.html") profile
+  
+  //-draft section-------------------------------------------------
+  .draft(class="p20")
+    h2 quick 
+    p write A draft for your ideas
+    form(action="", method="post")
+      input(class="m10 rad-6", type="text", name="title", placeholder="Title")
+      textarea(name="thought", placeholder=" Your Thought")
+      input(class="red-6", type="submit", value="Save") 
+  
+  //-target section-------------------------------------------------
+  .target
+    h2 Yearly Targets
+    p target of the year
+    .target-box
+      .target-icon.blue
+          i.fa-solid.fa-dollar-sign.fa-lg
+      .target-details
+        span money
+        span $20.000
+        .progress
+          span(style="width:80%", progress="80%", class="span-blue")
+
+    .target-box
+      .target-icon.green
+        i.fa-solid.fa-code.fa-lg
+      .target-details
+        span projects
+        span 24
+        .progress
+          span(style="width:55%", progress="55%", class="span-green")
+
+    .target-box
+      .target-icon.yellow
+          i.fa-solid.fa-user.fa-lg
+      .target-details
+        span team
+        span 1
+        .progress
+          span(style="width:30%", progress="30%", class="span-orange")
+
+  //-Tickets Statistics--------------------------------------------
+  .tickets
+    h2 Tickets Statistics
+    p Everything About Support Tickets
+    .tickets-box
+      .ticket-box
+        i(class="fa-regular fa-rectangle-list fa-2x mb-10 c-orange")
+        h3 2500
+        p total
+      
+      .ticket-box
+        i(class="fa-solid fa-spinner fa-2x mb-10 c-blue")
+        h3 500
+        p pending
+      
+      .ticket-box
+        i(class="fa-regular fa-circle-check fa-2x mb-10 c-green")
+        h3 1900
+        p closed
+      
+      .ticket-box
+        i(class="fa-regular fa-rectangle-xmark fa-2x mb-10 c-red")
+        h3 100
+        p deleted
+  //-latest news ------------------------------------------------
+  .last-news
+    h2 last news
+    .new-box
+      img(src="img/n1.jpg", alt="last news", width="100px", height="60px", class="cover")
+      .new-content
+        h4 creaated with pug and sass
+        p new template with sass and pug
+      span 3 day
+    
+    .new-box
+      img(src="img/n2.jpg", alt="last news", width="100px", height="60px", class="cover")
+      .new-content
+        h4 creaated with pug and sass
+        p new template with sass and pug
+      span 5 day
+    .new-box
+      img(src="img/n3.jpg", alt="last news", width="100px", height="60px", class="cover")
+      .new-content
+        h4 creaated with pug and sass
+        p new template with sass and pug
+      span 6 day
+    .new-box
+      img(src="img/n4.jpg", alt="last news", width="100px", height="60px", class="cover")
+      .new-content
+        h4 creaated with pug and sass
+        p new template with sass and pug
+      span 7 day
+  //-task--------------------------
+  div.task  
+    h2 latest taskes
+    
+    .task-rwo
+      .task-content
+        h3 learn sass 
+        p learn sass and megrate to bootstarap
+      i(class="fa-regular fa-trash-can delete")
+    
+    
+    .task-rwo
+      .task-content
+        h3 learn sass 
+        p learn sass and megrate to bootstarap
+      i(class="fa-regular fa-trash-can delete")
+    
+    
+    .task-rwo
+      .task-content.done
+        h3 learn sass 
+        p learn sass and megrate to bootstarap
+      i(class="fa-regular fa-trash-can delete")
+    
+    
+    .task-rwo
+      .task-content
+        h3 learn sass 
+        p learn sass and megrate to bootstarap
+      i(class="fa-regular fa-trash-can delete")
+    
+    
+    .task-rwo
+      .task-content
+        h3 learn sass 
+        p learn sass and megrate to bootstarap
+      i(class="fa-regular fa-trash-can delete")
+  //-top search item--------------------------------
+  .keywords
+    h2 top search words
+      .key-head
+        span keyword  
+        span search count
+      
+      .key-content
+        span html  
+        span 90  
+      
+      .key-content
+        span css  
+        span 80 
+      .key-content
+        span sass  
+        span 60  
+      .key-content
+        span pug  
+        span 90  
+      .key-content
+        span bootstrap  
+        span 0
+      .key-content
+        span git  
+        span 50  
+  //-last projects-----------------------------------------------------
+  .last-project
+    h2 Last Project Progress
+    ul.process
+      li.done got the project
+      li.done stared the project
+      li.done the project about to finish
+      li.still test the project
+      li.current finish the project get money

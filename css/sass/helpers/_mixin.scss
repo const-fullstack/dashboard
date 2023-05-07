@@ -1,3 +1,5 @@
+/** @format */
+
 //media for mobile
 @mixin mobile {
   @media (max-width: 767px) {
@@ -26,5 +28,6 @@
 }
 
 @mixin trans {
-  transition: .5s;
+  transition: 0.5s;
 }
+

@@ -4,6 +4,7 @@
 @use "../helpers/vars" as *;
 
 .waper {
+
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
   gap: 20px;
@@ -199,6 +200,11 @@
               padding: 5px;
               color: #fff;
               border-radius: 6px;
+              @include mobile {
+                font-size: 12px;
+                right: -45px;
+                bottom: 15px
+              }
             }
             &::after {
               content: "";
@@ -209,6 +215,9 @@
               border-width: 10px;
               border-style: solid;
               border-radius: 5px;
+              @include mobile {
+                display: none;
+              }
             }
           }
         }
@@ -369,4 +378,5 @@
       }
     }
   }
+  
 }

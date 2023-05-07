@@ -61,13 +61,26 @@
 .c-orange {
   color: #f59e0b;
 }
+.bg-orange {
+  background-color: #f59e0b;
+}
 
 .c-blue {
   color: #0075ff;
 }
+.bg-blue {
+  background-color: #0075ff;
+}
 
 .c-green {
   color: #22c55e;
+}
+.bg-blue {
+  background-color: #22c55e;
+}
+
+.bg-red {
+  background-color: #f44336;
 }
 .c-red {
   color: #f44336;

@@ -8,6 +8,7 @@ main.main-page {
   @import "../sections/aside";
   .content {
     width: 100%;
+    overflow-x: hidden;
     @import "../sections/header-content";
     h1 {
       font-size: 2rem;
@@ -34,4 +35,5 @@ main.main-page {
     }
     @import "../sections/waper";
   }
+  @import "../sections/table";
 }

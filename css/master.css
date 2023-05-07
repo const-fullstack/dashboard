@@ -51,6 +51,7 @@ p {
 /** @format */ /** @format */
 main.main-page {
   height: 100vh;
+  /** @format */
 }
 main.main-page aside.sidebar {
   width: 250px;
@@ -113,6 +114,7 @@ main.main-page aside.sidebar ul li a span {
 }
 main.main-page .content {
   width: 100%;
+  overflow-x: hidden;
   /** @format */ /** @format */
 }
 main.main-page .content header {
@@ -378,6 +380,13 @@ main.main-page .content .waper .target .target-box .target-details .progress spa
   color: #fff;
   border-radius: 6px;
 }
+@media (max-width: 767px) {
+  main.main-page .content .waper .target .target-box .target-details .progress span::before {
+    font-size: 12px;
+    right: -45px;
+    bottom: 15px;
+  }
+}
 main.main-page .content .waper .target .target-box .target-details .progress span::after {
   content: "";
   position: absolute;
@@ -387,6 +396,11 @@ main.main-page .content .waper .target .target-box .target-details .progress spa
   border-width: 10px;
   border-style: solid;
   border-radius: 5px;
+}
+@media (max-width: 767px) {
+  main.main-page .content .waper .target .target-box .target-details .progress span::after {
+    display: none;
+  }
 }
 main.main-page .content .waper .tickets {
   padding: 20px;
@@ -540,6 +554,61 @@ main.main-page .content .waper .last-project .process li.current::before {
   to {
     background-color: #fff;
   }
+}
+main.main-page .table {
+  padding: 20px;
+  min-width: 100%;
+}
+@media (max-width: 1240px) {
+  main.main-page .table {
+    overflow-x: scroll;
+  }
+}
+main.main-page .table h2 {
+  text-transform: capitalize;
+}
+main.main-page .table table {
+  min-width: 1000px;
+  width: 100%;
+  border-spacing: 0;
+  text-align: center;
+  border-radius: 6px;
+  border-right: 1px solid #ccc;
+}
+main.main-page .table table caption {
+  color: black;
+  font-variant: small-caps;
+  font-size: 2rem;
+  color: #22c55e;
+}
+main.main-page .table table th,
+main.main-page .table table td {
+  padding: 5px;
+}
+main.main-page .table table td {
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+}
+main.main-page .table table thead {
+  background-color: #ddd;
+}
+main.main-page .table table tbody tr td img {
+  border-radius: 50%;
+}
+main.main-page .table table tbody tr td img:not(:first-child) {
+  margin-left: -15px;
+}
+main.main-page .table table tbody tr td:last-child {
+  border-radius: 10px;
+  padding: 5px 0;
+  display: block;
+}
+main.main-page .table table tbody tr td:nth-child(5) {
+  text-align: left;
+  border-right: 1px solid #ccc;
+}
+main.main-page .table table tbody tr td:nth-child(6) {
+  margin-top: 10px;
 }
 
 /*# sourceMappingURL=master.css.map */

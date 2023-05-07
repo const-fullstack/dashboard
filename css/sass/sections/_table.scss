@@ -1,0 +1,65 @@
+/** @format */
+@use "../helpers/vars" as *;
+.table {
+  padding: 20px;
+  min-width: 100%;
+  @media (max-width: 1240px) {
+    overflow-x: scroll;
+  }
+
+  h2 {
+    text-transform: capitalize;
+  }
+
+  table {
+    min-width: 1000px;
+    width: 100%;
+    border-spacing: 0;
+    text-align: center;
+    border-radius: 6px;
+    border-right: 1px solid #ccc;
+    caption {
+      color: black;
+      font-variant: small-caps;
+      font-size: 2rem;
+      color: $green-color;
+    }
+    th,
+    td {
+      padding: 5px;
+      
+    }
+    td {
+      border-bottom: 1px solid #ccc;
+      border-left: 1px solid #ccc;
+    }
+    thead {
+      background-color: #ddd;
+    }
+    tbody {
+      tr {
+        td {
+          img {
+            border-radius: 50%;
+            &:not(:first-child) {
+              margin-left: -15px;
+            }
+          }
+          &:last-child {
+            border-radius: 10px;
+            padding: 5px 0;
+            display: block; 
+          }
+          &:nth-child(5) {
+            text-align: left;
+            border-right: 1px solid #ccc;
+  
+          }
+          &:nth-child(6) {
+            margin-top: 10px
+          }
+        }
+      }
+    }
+  }
+}
